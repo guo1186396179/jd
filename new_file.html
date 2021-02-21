@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			li div{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ui>
+			<li>
+				<a href="">1</a>
+				<a href="">2</a>
+				<a href="">3</a>
+				<div>
+					<p>02</p>
+				</div>
+			</li>
+			<li>2
+			<div>
+				<p>03</p>
+			</div>
+			</li>
+			<li>3</li>
+		</ui>
+		<div class="div">
+			
+			
+			
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.js">
+		
+	</script>
+	<script>
+//        var li = document.querySelectorAll('li');
+// 	   var div = document.querySelectorAll('li div');
+//         for (var i = 0; i < li.length; i++) {
+//             li[i].onmouseover = function () {
+//                 this.children [0].style.display = 'block';
+//             }
+//             li[i].onmouseout = function () {
+//                 this.children [.style.display = 'none';
+//             }
+//         }
+		
+		$(function(){
+			for (var i=0;i<$('li').length;i++){
+				$('li').mouseover(function(){
+					$(this).children('div').css({'display':'block'});
+				})
+				$('li').mouseleave(function(){
+					$(this).children('div').css({'display':'none'});
+
+				})
+			}
+		})
+		
+    </script>
+</html>
